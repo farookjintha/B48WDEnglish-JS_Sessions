@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet"> 
+    <!-- <script src="./script.js" type="text/javascript"> </script> -->
+    <script>
+
+        function createMyElement(){
+            const myHeading = document.createElement('h1'); //to add a new element ex: div, span, h1, img
+            myHeading.innerText = 'This is my Heading element!'; //to add a content inside the element
+            myHeading.setAttribute('class', 'my-custom-class'); //to add an attribute to an element ex: class, id, href
+            document.body.appendChild(myHeading);
+        };
+
+        function createMyAnchorElement(){
+            const myAnchor = document.createElement('a'); //to add a new element ex: div, span, h1, img
+            myAnchor.innerText = 'Go to Youtube'; //to add a content inside the element
+            myAnchor.setAttribute('href', 'https://www.youtube.com'); //to add an attribute to an element ex: class, id, href
+            myAnchor.setAttribute('target', '_blank')
+            document.body.appendChild(myAnchor);
+            document.body.append('Just a string.....');
+        };
+
+        function accessAndModifyMyElement(){
+            const myElement = document.getElementById('myDiv1');
+            myElement.style.width = '300px';
+            myElement.style.height = '300px';
+            myElement.style.border = '1px solid red';
+            myElement.innerHTML = "<img src='./filename.png' />";
+
+
+            const myElement2 = document.getElementsByClassName('myDiv2');
+            myElement2[0].style.width = '300px';
+            myElement2[0].style.height = '300px';
+            myElement2[0].style.border = '1px solid green';
+            myElement2[0].innerHTML = '<h2>Heading inside my element.</h2>';
+
+
+
+            myElement2[1].style.width = '300px';
+            myElement2[1].style.height = '300px';
+            myElement2[1].style.border = '1px solid blue';
+            myElement2[1].innerHTML = '<h2>Heading inside my element.</h2>';
+        }
+
+        function accessUsingQuerySelector(){
+            const myElements = document.querySelectorAll('#myDiv1');
+
+            myElements.forEach((element) => {
+                element.style.width = '300px';
+                element.style.height = '300px';
+                element.style.border = '1px solid red';
+                element.innerHTML = '<h2>Accessed using Query Selector</h2>';
+            })
+            // myElement.style.width = '300px';
+            // myElement.style.height = '300px';
+            // myElement.style.border = '1px solid red';
+            // myElement.innerHTML = '<h2>Accessed using Query Selector</h2>';
+        }
+
+    </script>
+
+</head>
+<body>
+    <button onclick="createMyElement()">Click</button>
+    <button onclick="createMyAnchorElement()">Click to add an Anchor tag</button>
+    <button onclick="accessAndModifyMyElement()">Click to access and modify the element.</button>
+ 
+    <button onclick="accessUsingQuerySelector()">Click to access (using Query Selector)</button>
+
+    <div id="myDiv1">
+
+    </div>
+
+    <div class="myDiv2">
+
+    </div>
+
+    <div class="myDiv2">
+
+    </div>
+
+</body>
+</html>

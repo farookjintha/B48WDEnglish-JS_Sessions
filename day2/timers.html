@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var interval;
+        function runAfterTimeout(){
+            setTimeout(() => {
+                var currentTime = new Date();
+                document.getElementById('myWatch').innerText = currentTime.toLocaleTimeString();
+            }, 0);
+        }
+
+
+        function runAtAnInterval(){
+            setInterval(() => {
+                console.log('Execute after this interval');
+                var currentTime = new Date();
+                document.getElementById('myWatch').innerText = currentTime.toLocaleTimeString();
+            }, 1000);
+        }
+        
+        // runAfterTimeout();
+        // runAtAnInterval();
+        // runImmediately();
+
+        function clickToClearInterval(){
+            clearInterval(interval);
+        }
+    </script>
+</head>
+<body>
+    <h1>Timer Functions</h1>
+    <!-- <button onclick="clickToClearInterval()">Clear the interval</button> -->
+    <button onclick="runAtAnInterval()">Show current time (setInterval)</button>
+
+    <button onclick="runAfterTimeout()">Show current time (SetTimeOut)</button>
+
+
+    <h2 id="myWatch"></h2>
+    <!-- setTimeout() --> 
+    <!-- setInterval() -->
+    <!-- setImmediate() -->
+</body>
+</html>

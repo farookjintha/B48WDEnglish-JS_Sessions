@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .username{
+            color: red;
+        }
+    </style>
+    <script>
+        function redirection(){
+            // location.href = 'https://google.com';
+
+
+
+            if(location.pathname === '/day2/index.html'){
+                location.href = 'https://facebook.com'
+            }
+            console.log('Redirecred successfully');
+        }
+
+        // redirection();
+
+        function alertUser(){
+            alert('Importance Notice: Please take care of your belongings!');
+            alert('Your username / password is incorrect, please provide the valid credentials!');
+
+        }
+
+        function getUserName(){
+            let username = prompt('Enter your name', "John");
+
+            if(prompt != null){
+                document.getElementById('myHeading').innerHTML = `Hello <span class='username'> ${username} </span> ! Hope you're doing good!`;
+            }
+        }
+
+        function getConfirmation(){
+            var confirmation = confirm('Are you sure you want to continue?')
+            console.log('Confirmation: ', confirmation);
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="getUserName()">Get Username</button>
+        <button onclick="alertUser()">Alert User</button>
+        <button onclick="getConfirmation()">Get Confirmation</button>
+
+        <h1 id="myHeading"></h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function updateElement(event){
+            document.getElementById('myHeading').innerText = `${event} event has been triggered.`
+        }
+
+        function onKeyDown(){
+            document.getElementById('input1');
+            document.getElementById('myHeading').innerText = `KeyDown event has been triggered.`
+
+        }
+
+    </script>
+</head>
+<body onload="window.alert('The page has been loaded.')">
+    <div>
+        <button onclick="updateElement('onClick')">On Click Event</button>
+        <button onmouseover="updateElement('onMouseOver')">On Mouse Over Event</button>
+        <input type="number" id="input1" onkeydown="onKeyDown()"/>
+    </div>
+
+    <h1 id="myHeading"></h1>
+</body>
+</html>

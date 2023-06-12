@@ -1,0 +1,7 @@
+Document - refers to the web page in a tab.
+
+Ex: document.body, document.getElementById()
+
+Window - refers to the entire browser and its components.
+
+Ex: window.location.origin  / location.origin

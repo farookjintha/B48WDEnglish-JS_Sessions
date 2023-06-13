@@ -10,6 +10,11 @@
             document.getElementById('myHeading').innerText = `${event} event has been triggered.`
         }
 
+        function handleMouseOver(){
+            let myElement = document.getElementById('hello');
+            myElement.style.color = 'red';
+        }
+
         function onKeyDown(){
             document.getElementById('input1');
             document.getElementById('myHeading').innerText = `KeyDown event has been triggered.`
@@ -24,6 +29,8 @@
         <button onmouseover="updateElement('onMouseOver')">On Mouse Over Event</button>
         <input type="number" id="input1" onkeydown="onKeyDown()"/>
     </div>
+
+    <span id="hello" onmouseover="handleMouseOver()">Hello</span>
 
     <h1 id="myHeading"></h1>
 </body>

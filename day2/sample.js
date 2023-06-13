@@ -1,7 +1,7 @@
 function runAfterTimeout(){
     setTimeout(() => {
         console.log('Execute after this timeout')
-    }, 0);
+    }, 10000);
 }
 
 

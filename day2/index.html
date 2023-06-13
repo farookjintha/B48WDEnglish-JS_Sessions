@@ -27,7 +27,6 @@
         function alertUser(){
             alert('Importance Notice: Please take care of your belongings!');
             alert('Your username / password is incorrect, please provide the valid credentials!');
-
         }
 
         function getUserName(){
@@ -43,6 +42,28 @@
             console.log('Confirmation: ', confirmation);
         }
 
+        function getCoordinates(){
+            var element = document.getElementById('coordinateHeading');
+            var coordinates = element.getBoundingClientRect(); 
+
+            var spanElement = document.getElementById('mySpan');
+            spanElement.innerText = `X: ${coordinates.left}  -    Y: ${coordinates.top}`;
+       }
+
+
+       function getCount(){
+           var textAreaElement = document.getElementById('myText');
+
+           console.log(textAreaElement.value.length)
+       }
+
+       function editContent(){
+           var myEditableElement = document.getElementById('myContent');
+
+           myEditableElement.setAttribute('contenteditable', "true");
+       }
+
+       
     </script>
 </head>
 <body>
@@ -50,8 +71,29 @@
         <button onclick="getUserName()">Get Username</button>
         <button onclick="alertUser()">Alert User</button>
         <button onclick="getConfirmation()">Get Confirmation</button>
-
+        <h1 id="coordinateHeading" onclick="getCoordinates()">Click to get the X and Y Coordinates</h1>
         <h1 id="myHeading"></h1>
+
+        <span id="mySpan"></span>
+
+        <textarea id="myText" onkeyup="getCount()"></textarea>
+
+        <h1 id="myContent" onmouseover="editContent()">My Content to be edited</h1>
+        
     </div>
+
+
+
+
+    <!-- <script>
+        document.body.onkeyup = function(e){
+       if(e.key == ' '){
+           alert('Thank you!');
+           window.close();
+       }else{
+           alert('Invalid key pressed.')
+       }
+   }
+    </script> -->
 </body>
 </html>

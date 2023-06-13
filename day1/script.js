@@ -11,7 +11,7 @@ function createMyAnchorElement(){
     myAnchor.setAttribute('href', 'https://www.youtube.com'); //to add an attribute to an element ex: class, id, href
     myAnchor.setAttribute('target', '_blank')
     document.body.appendChild(myAnchor);
-    document.body.append('Just a string.....');
+    // document.body.append('Just a string.....');
 };
 
 function accessAndModifyMyElement(){

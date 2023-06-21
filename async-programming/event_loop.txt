@@ -1,0 +1,34 @@
+
+
+Javascript is a single threaded language, but also supports non-blocking I/O operations (async)
+
+// Event Loop
+
+Web API
+
+
+Call Stack  
+Callback Queue / Macrotask Queue
+Microtask Queue
+
+Step 1:
+Callback Queue -> console.log('Start');
+Callstack -> Start
+
+
+Step: 2
+Callback Queue -> 
+setTimeout(()=> {
+    console.log('Timeout!')
+}, 0);
+
+
+Step3: 
+Callback Queue ->console.log('End');
+Callstack -> End
+
+
+
+Callstack -> 
+Timeout!
+setTimeout();

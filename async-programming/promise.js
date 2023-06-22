@@ -43,10 +43,12 @@ const uploadFile = (filePath) => {
         }, 5000);
     }) 
 }
+
 const anotherTimeConsumingJob = () => {
     return new Promise((resolve, reject) =>{
         setTimeout(()=> {
-            reject(`Data has been processed.`);
+            // reject(`Error has been thrown.`);
+            resolve('Executed successfully.')
         }, 10000);
     }) 
 }

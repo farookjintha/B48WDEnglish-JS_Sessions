@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+}
+
+.post-container{
+    width: 200px;
+    margin-left: 1em;
+}
+
+.post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options{
+    display: flex;
+    gap: 10px;
+}
+
+i, img{
+    cursor: pointer;
+}
+
+.user{
+    background: antiquewhite;
+    border: 1px solid red;
+    margin: 1em 0;
+}

@@ -9,7 +9,7 @@ async function getUsers(){
     try{
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
         const userList = await response.json();
-        console.log('User List: ', userList);
+
         userList.forEach((currentUser) => {
             users.innerHTML += `
                 <div class='user'>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color:red
+        }
+
+        .hello-5{
+            color:green
+        }
+
+        p:nth-child(2n){
+            color: blue;
+        }
+
+        p:nth-child(2n + 1){
+            color: yellow;
+        }
+
+        h2:nth-child(2){
+            color:violet;
+        }
+
+        h2:nth-of-type(2){
+            color:blue;
+        }
+
+        h2:last-child{
+            color: yellow;
+        }
+        
+        h1:first-child{
+            color: peru;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hello 1</p>
+        <p>Hello 2</p>
+        <p>Hello 3</p>
+        <p>Hello 4</p>
+        <p>Hello 5</p>
+        <p>Hello 6</p>
+        <p>Hello 7</p>
+    </div>
+
+    <div>
+        <h1>Heading 1</h1>
+        <h2>Head 2</h2>
+        <h3>Head 3</h3>
+        <h2>Head 4</h2>
+        <h2>Head 5</h2>
+        <h2>Head 6</h2>
+        <h2>Head 7</h2>
+        <h2>Head 8</h2>
+    </div>
+</body>
+</html>
